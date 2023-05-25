@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-seoautosite-dev-145817-authRole",
+      "UnauthRoleArn": "arn:aws:iam::210347597948:role/amplify-seoautosite-dev-145817-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::210347597948:role/amplify-seoautosite-dev-145817-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-seoautosite-dev-145817-deployment",
+      "UnauthRoleName": "amplify-seoautosite-dev-145817-unauthRole",
+      "StackName": "amplify-seoautosite-dev-145817",
+      "StackId": "arn:aws:cloudformation:eu-north-1:210347597948:stack/amplify-seoautosite-dev-145817/1d2cb400-f4aa-11ed-ac52-0aa1923949e8",
+      "AmplifyAppId": "d3dzj586wdc4fp"
+    },
+    "categories": {
+      "storage": {
+        "seoautodb": {}
+      },
+      "function": {
+        "seoautoapi": {
+          "deploymentBucketName": "amplify-seoautosite-dev-145817-deployment",
+          "s3Key": "amplify-builds/seoautoapi-4b4b762f6b3769686e49-build.zip"
+        }
+      },
+      "api": {
+        "seoautoapi": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "api": {
+    "seoautoapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "seoautoapi"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "seoautoapi": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "seoautodb"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_seoautoapi_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "seoautoapi"
+        }
+      ]
+    },
+    "AMPLIFY_function_seoautoapi_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "seoautoapi"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "seoautodb": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

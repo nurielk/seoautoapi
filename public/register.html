@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>SEOAUTO Login Page</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="🔐 An Open Source Template for Login Page From Scratch Without Any CSS Framework"
+    />
+    <meta name="keywords" content="login page css, login template, login css, login form template" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+    />
+
+
+  <link rel="stylesheet" href="/css/login.css" />
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href='/css/bootstrap.css' />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/css/responsive.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+
+   <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              SEOAUTO
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href='index.html'>Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href='about.html'> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href='service.html'> Services </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contactLink">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="quote_btn-container ">
+              <a href="">
+                <span>
+                  <a href='login.html'>Login Page</a><br>
+                  <a href='register.html'>Register Page<span class="sr-only">(current)</span></a><br>
+                </span>
+              </a>
+              <a href="">             </a>
+              <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <section class="main-content">
+      <div class="login-card">
+        <h1 class="form-header playfair-font">Sign Up</h1>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Register</button>
+          </div>
+        </form>
+
+
+
+<!--          <form method="POST" action="/register">-->
+<!--            {{ form.csrf_token }}-->
+<!--            <div class="input-group">-->
+<!--                <div class="form-group">-->
+<!--                {{ form.username.label }} {{ form.username(class="form-control") }}-->
+<!--                </div>-->
+<!--                {{ form.hidden_tag() }}-->
+<!--                {{ form.username }}-->
+<!--                {{ form.password }}-->
+<!--                {{ form.submit }}-->
+<!--              <div class="absolute-element">-->
+<!--                <span class="btn-clear" onClick="clearInput()">-->
+<!--                  <img src="images/clear-icon.png" alt="">-->
+<!--                </span>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--          </form>-->
+        <a href="login.html">Already have an account? Log In</a>
+      </div>
+    </section>
+
+    <!-- ADDITIONAL CODE -- start YOU MIGHT NOT NEEDED -->
+    <footer class="franklin-font">
+
+    </footer>
+    <!-- ADDITIONAL CODE -- end YOU MIGHT NOT NEEDED -->
+    <script>
+      function clearInput() {
+        document.getElementById('input-email').value = ''
+      }
+    </script>
+     <div id="error-message" class="alert alert-danger" style="display: none;"></div>
+
+    <script src="/js/register.js"></script>
+   </div>
+  </body>
+</html>

@@ -6,15 +6,12 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from uuid import uuid4
 
-#installation for storing the username
+# installation for storing the username
 from flask import Flask, render_template, url_for, redirect
-
-
 
 BASE_ROUTE = "/items"
 TABLE = os.environ.get("STORAGE_SEOAUTODB_NAME")
 client = boto3.client('dynamodb')
-
 
 app = Flask(__name__)
 
@@ -25,11 +22,11 @@ CORS(app)
 @app.route(BASE_ROUTE, methods=['POST'])
 def create_item():
     request_json = request.get_json()
-    client.put_item(TableName=TABLE, Item={'id': {'S':str(uuid4())},
+    client.put_item(TableName=TABLE, Item={'id': {'S': str(uuid4())},
                                            'username': {'S': request_json.get('username')},
                                            'password': {'S': request_json.get('password')},
                                            'user_id': {'S': request_json.get('user_id')}
-    })
+                                           })
     return jsonify(message="item created")
 
 
@@ -73,13 +70,11 @@ def update_user(user_id):
     return jsonify(message="item updated")
 
 
-
-
-@app.route(BASE_ROUTE, methods=['GET']) 
+@app.route(BASE_ROUTE, methods=['GET'])
 def list_items():
-    return jsonify(data=client.scan(TableName=TABLE) )
+    return jsonify(data=client.scan(TableName=TABLE))
 
-  
+
 def handler(event, context):
     return awsgi.response(app, event, context)
 

@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify'
 import config from './aws-exports.js'
 
+import { useEffect, useState } from 'react'
+import { API } from 'aws-amplify'
+
 // Function to handle form submission
 function handleFormSubmission(event) {
   event.preventDefault(); // Prevent the default form submission

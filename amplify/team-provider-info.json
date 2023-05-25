@@ -18,7 +18,7 @@
       "function": {
         "seoautoapi": {
           "deploymentBucketName": "amplify-seoautosite-dev-145817-deployment",
-          "s3Key": "amplify-builds/seoautoapi-4b4b762f6b3769686e49-build.zip"
+          "s3Key": "amplify-builds/seoautoapi-6f4a784f4f307a635557-build.zip"
         }
       },
       "api": {
